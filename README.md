@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Development Test Instructions
 
-## Getting Started
+Welcome to this mini-project designed to assess your technical skills, logic, and ability to follow detailed instructions.
 
-First, run the development server:
+## Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Fork the GitHub Repository**: Start by forking the repository at https://github.com/ELEVATOR-ONBOARDER/my-crm, which contains the base of the project.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## General Guidelines
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Philosophy**: Don't reinvent the wheel. Aim for clear logic and a polished finish. The style should be clean and done in a logical way, but the specific style is up to you. We're not looking for a designer, so while aesthetics are appreciated, they are not the most critical aspect.
+- **Required Technologies**:
+  - **CSS**: Use TailwindCSS.
+  - **Typescript**: Use Typescript and use it properly. Strongly type your variables for example and don't use any, never.
+  - **Framework**: Use Prisma with Next.js (version >14) utilizing server actions.
+  - **Tests**: Write unit tests for style and functionality.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Tasks to Accomplish
 
-## Learn More
+1. **Database Configuration**:
+   - Set up a database suitable for Prisma. PlanetScale is recommended, but other options are acceptable.
 
-To learn more about Next.js, take a look at the following resources:
+2. **User Interface**:
+   - **Header**: Create a header with the Next.js icon (in `/public`), and links to `Home`, `Contacts`, and `Settings`.
+   - **Loading Indicator**: Each page should display a loading indicator while data is being fetched.
+   - **Responsive Design**: Ensure that the application is functional across various devices and screen sizes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Application Features**:
+   - **Table (/contacts)**: Implement a table that lists the contacts. Include a link to the edit form (see below).
+   - **Creation Form (/contacts/new)**: A form to add new entries. The form should contain the following fields with the exact field names:
+    - `firstName` (required string)
+    - `lastName` (required string)
+    - `email` (required string)
+    - `gender` (required string, possible values: male, female, other)
+    - `moneyToInvest` (optional number, defined in € Euro)
+    Display a message in case of success or error and redirect to the table.
+    **Edit Form (/contacts/[id]/edit)**: A form to edit the contact from the table button.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. **Submission and Documentation**:
+   - **GitHub**: The final project must be submitted on GitHub with me added as a collaborator. Ensure I can clone the repository and start the project without needing additional information.
+   - **README**: Include in the README the number of hours spent on the project, as well as any additional features you could have implemented.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Good luck and happy developing!
