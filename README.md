@@ -20,27 +20,37 @@ Welcome to this mini-project designed to assess your technical skills, logic, an
 ## Tasks to Accomplish
 
 1. **Database Configuration**:
-   - Set up a database suitable for Prisma. PlanetScale is recommended, but other options are acceptable.
+
+   - Use Prisma to handle your database. You will use the given database URL.
 
 2. **User Interface**:
-   - **Header**: Create a header with the Next.js icon (in `/public`), and links to `Home`, `Contacts`, and `Settings`.
+
+   - **Header**: Create a header with the Next.js icon (in `/public`), and links to `Dashboard`, `Machines`, and `Settings`.
    - **Loading Indicator**: Each page should display a loading indicator while data is being fetched.
    - **Responsive Design**: Ensure that the application is functional across various devices and screen sizes.
 
 3. **Application Features**:
-   - **Home**: Just create a page that renders "home".
-   - **Settings**: Just create a page that renders "settings".
-   - **Table (/contacts)**: Implement a table that lists the contacts. Include a link to the edit form (see below).
-   - **Creation Form (/contacts/new)**: A form to add new entries. The form should contain the following fields with the exact field names:
-    - `firstName` (required string)
-    - `lastName` (required string)
-    - `email` (required string)
-    - `gender` (required string, possible values: male, female, other)
-    - `moneyToInvest` (optional number, defined in € Euro, **the number could be 102.30 for example**)
-    - Display a message in case of success or error and redirect to the table.
-   - **Edit Form (/contacts/[id]/edit)**: A form to edit the contact from the table button.
 
-4. **Submission and Documentation**:
+   - **Dashboard**: Just create a page that renders "Dashboard".
+   - **Settings**: Just create a page that renders "Settings".
+   - **Table (/machines)**: Implement a table that lists the machines stored in the database. Include a link to the edit form (see below).
+   - **Creation Form (/machines/new)**: A form to add new entries. The form should contain the following fields with the exact field names:
+   - `codeName` (required string)
+   - `managerName` (required string)
+   - `warehousePosition` (required string, possible values: inside, outside, other)
+   - `energyConsumption` (optional number, defined in Kw/H, **the number could be 102.30 for example**)
+   - Display a message in case of success or error and redirect to the table.
+   - **Edit Form (/machines/[id]/edit)**: A form to edit the machine from the table button.
+
+4. **Additional features**:
+   You have here a list of features that you can add to your project. You can select which features you implement
+
+   - **Table sorting**: On the machines table, add a way for the user to sort the table on each column (ascending and descending). The sort can be triggered on only one column at the same time.
+   - **Delete handling**: Add a delete button on each rows of the table to be able to delete the row. A confirmation alert should appear to prevent accidental deletes.
+   - **Images handling**: For each machine, add a way to store an image. That image can be then seen on each row of the table.
+   - **Details page**: Implement the details page (/machines/[id]) where the data of a specific machine can be seen. In that page, you must also add a "Notes" section where the user can save notes about the machine in a text area input and read the previous notes.
+
+5. **Submission and Documentation**:
    - **GitHub**: The final project must be submitted on GitHub with me added as a collaborator. Ensure I can clone the repository and start the project without needing additional information. **that means you should make sure that every information is available in the repository and that I can do all steps to launch the website in build mode, also think about env.**
    - **README**: Include in the README the number of hours spent on the project, as well as any additional features you could have implemented.
 
