@@ -12,6 +12,7 @@ export default async function Page(): Promise<JSX.Element> {
     "Nom du manager",
     "Position de l'entrepot",
     "Consommation énergétique",
+    "Redirection",
     "Modification",
     "Suppression",
   ];
@@ -45,6 +46,11 @@ export default async function Page(): Promise<JSX.Element> {
               <div className="flex-1 truncate">{machine.managerName}</div>
               <div className="flex-1 truncate">{machine.warehousePosition}</div>
               <div className="flex-1 truncate">{machine.energyConsumption ?? "---"}</div>
+              <div className="flex-1 truncate">
+                <Link href={`/machines/${machine.id}`} className="bg-amber-700 text-white px-4 py-2 rounded">
+                  Voir
+                </Link>
+              </div>
               <div className="flex-1 truncate">
                 <Link href={`/machines/${machine.id}/edit`} className="bg-blue-500 text-white px-4 py-2 rounded">
                   Modifier

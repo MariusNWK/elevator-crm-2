@@ -10,6 +10,7 @@ export async function createMachine(data: TNewMachineData): Promise<TResponse> {
     data: {
       ...data,
       energyConsumption: data.energyConsumption ? Number(data.energyConsumption) : null,
+      notes: [],
     },
   });
 

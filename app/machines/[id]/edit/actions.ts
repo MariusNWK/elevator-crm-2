@@ -1,3 +1,5 @@
+"use server";
+
 import { db } from "@/db";
 import { TNewMachineData } from "@/zod"
 import { revalidatePath } from "next/cache";

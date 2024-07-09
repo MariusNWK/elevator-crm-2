@@ -1,7 +1,6 @@
 import NewMachineWrapper from "@/components/NewMachineWrapper";
 import { TResponse } from "@/type";
 import { TNewMachineData } from "@/zod";
-import { createMachine } from "../../new/actions";
 import { notFound } from "next/navigation";
 import { editMachine } from "./actions";
 import { db } from "@/db";

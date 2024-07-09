@@ -15,9 +15,10 @@ datasource db {
 }
 
 model Machine {
-  id                Int    @id @default(autoincrement())
+  id                Int      @id @default(autoincrement())
   codeName          String
   managerName       String
   warehousePosition String
   energyConsumption Float?
+  notes             String[]
 }
