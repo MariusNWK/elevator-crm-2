@@ -55,3 +55,18 @@ Welcome to this mini-project designed to assess your technical skills, logic, an
    - **README**: Include in the README the number of hours spent on the project, as well as any additional features you could have implemented.
 
 Good luck and happy developing!
+
+
+feature I could have implemented : delete notes, edit notes
+
+
+number of hours spent on the project :
+
+day 1
+   40min : setup project, setup environment, header, texts on pages, new machine page
+   3h00  : setup postgresql (fail)
+
+day 2
+   27 min : setup postgresql
+   1h38   : remaining Application Features + Delete handling + Details page
+   31 min : tests (fail)
