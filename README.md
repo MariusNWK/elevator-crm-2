@@ -68,5 +68,5 @@ number of hours spent on the project :
 
 - **day 2**
    - 27 min : setup postgresql
-   -1h38   : remaining Application Features + Delete handling + Details page
+   - 1h38   : remaining Application Features + Delete handling + Details page
    - 31 min : tests (fail)
