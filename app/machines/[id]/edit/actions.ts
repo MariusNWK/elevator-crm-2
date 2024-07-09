@@ -1,12 +1,12 @@
-"use server";
-
 import { db } from "@/db";
-import { TResponse } from "@/type";
-import { TNewMachineData } from "@/zod";
+import { TNewMachineData } from "@/zod"
 import { revalidatePath } from "next/cache";
 
-export async function createMachine(data: TNewMachineData): Promise<TResponse> {
-  await db.machine.create({
+export const editMachine = async (data: TNewMachineData, id: number) => {
+  await db.machine.update({
+    where: {
+      id,
+    },
     data: {
       ...data,
       energyConsumption: data.energyConsumption ? Number(data.energyConsumption) : null,
@@ -16,6 +16,6 @@ export async function createMachine(data: TNewMachineData): Promise<TResponse> {
   revalidatePath("/machines");
 
   return {
-    success: "La machine a bien été créée",
+    success: "La machine a bien été modifiée",
   };
 }

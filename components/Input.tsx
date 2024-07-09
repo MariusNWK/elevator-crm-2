@@ -9,8 +9,6 @@ interface IInputProps {
   hideError?: boolean;
 }
 
-/* c8 ignore start */
-
 export default function Input(props: IInputProps): JSX.Element {
   const {
     field: { onChange, value },

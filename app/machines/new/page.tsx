@@ -7,7 +7,6 @@ export default function Page(): JSX.Element {
   const onSubmit = async (data: TNewMachineData): Promise<TResponse> => {
     "use server";
 
-    console.log("data: ", data);
     return createMachine(data);
   };
 
