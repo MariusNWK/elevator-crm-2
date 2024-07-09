@@ -49,7 +49,7 @@ export default async function Page(props: { params: { id: string } }): Promise<J
     <div className="flex flex-col gap-8 items-center justify-center h-full">
       <div className="flex flex-col">
         {pairs.map((pair) => (
-          <div className="flex">
+          <div className="flex" key={pair.label}>
             <div className="p-4 font-semibold">{pair.label}</div>
             <div className="p-4">{pair.value}</div>
           </div>
@@ -58,8 +58,10 @@ export default async function Page(props: { params: { id: string } }): Promise<J
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
           <h1>Notes :</h1>
-          {machine.notes.map((note) => (
-            <div className="p-4 border border-black">{note}</div>
+          {machine.notes.map((note, index) => (
+            <div key={`${note}-${index}`} className="p-4 border border-black">
+              {note}
+            </div>
           ))}
         </div>
       </div>
